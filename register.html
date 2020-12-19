@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">  
+  <head>    
+    <link href="static/css/style1.css" rel="stylesheet">   
+    <meta charset="utf-8">
+    <title>Registration Form</title>
+    
+  </head>
+  <body>
+      <div class="regbox2">
+        <h1>Registration <style></style></h1>             
+      <form action="/new/" method="POST">              
+
+
+        {% csrf_token %}
+        
+          <div>
+            <label>Name:</label>           
+            <input type="text" name="Name">
+            
+         </div>   
+          <div>
+              <label>Password:</label>
+             
+              <input type="password" name="Password"  >
+           </div>
+           <div>
+
+               <label>Email_ID:</label>
+               <input type="email" name="Email_ID" required >
+           </div>
+           <div>
+
+               <label>Gender</label>
+
+               <select name="Gender" type="radio">
+                   <option label="select" name="Gender"></option>
+                   <option label="Male" name="Gender" value="male"></option>
+                   <option label="Female" name="Gender" value="female"></option>
+               </select>
+            </div>
+            <div>
+
+                
+               <label>Date_of_Birth:</label>
+               <input type="date" name="Date_of_Birth" required>
+            </div>
+            <div>
+               <label>Address:</label>
+               <textarea name="Address"></textarea>
+            </div>
+            <div>
+               <label>Phone_Number</label>
+               <input type="tel" name="Phone_Number" required>
+            </div>  
+            <div>
+              <label>Photo</label>
+              <input type="file" name="Photo" >
+
+            </div>
+            
+            <div>
+
+                <input type="submit">
+            </div>
+          
+      </form>
+      </div>
+    </body> 
+</html>
