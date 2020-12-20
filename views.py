@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from . import views
-from .models import ram
+from .models import Ram
 from .forms import frm
     
 
@@ -18,6 +18,6 @@ def createpst(request):
     address= request.POST.get("Address")
     phone= request.POST.get("Phone_Number")
     photo=request.POST.get("Photo")
-    a=ram(Name=name,Password=password,Email_ID= email,Gender=gen,Date_of_Birth=dob,Address=address,Phone_Number=phone,Photo=photo)
+    a=Ram(Name=name,Password=password,Email_ID= email,Gender=gen,Date_of_Birth=dob,Address=address,Phone_Number=phone,Photo=photo)
     a.save()
     return render(request,"login.html")
