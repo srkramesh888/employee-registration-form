@@ -1,7 +1,7 @@
 from django import forms
-from .models import ram
+from .models import Ram
 class frm(forms.ModelForm):
     class Meta:
-        model = ram
+        model = Ram
      
         fields = "__all__"
